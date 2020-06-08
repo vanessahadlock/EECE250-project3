@@ -1,4 +1,4 @@
-//Main file for Project 3
+//Grid Class file for Project 3
 //Michael Gesuale, Jack Geisler, & Vanessa Hadlock
 //June 4th, 2020
 
@@ -7,7 +7,7 @@
 #include<string>
 using namespace std;
 
-int main() {
+Grid::Grid() {
 
     ifstream inFile("input15.txt"); //opens the file of letters
 
@@ -57,4 +57,4 @@ int main() {
 
     cout<<endl;
 
-}# EECE250-project3
+}
