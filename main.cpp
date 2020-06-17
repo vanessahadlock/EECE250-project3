@@ -23,4 +23,12 @@ int main() {
   	else { 
     		cout << "You have entered an invalid algorithm choice. Please try again." << endl;
   	}
+	
+	 int result = wordlist.lookup();
+	 if (result == -1){
+     		 cout << ("Element not present");
+	 }
+	 else {
+		    cout << ("Element found at index ") << result;
+	 }
 }
