@@ -21,9 +21,7 @@ public:
   
   Grid(unsigned, unsigned, char);
   Grid(const char *);	
-  Grid(const Grid &);	//copy constructor 
-
-  void printGrid() const;
+  Grid(const Grid &);	//copy constructor
 
   unsigned getRows() const {return g_rowSize;}
   unsigned getColumns() const {return g_colSize;}
