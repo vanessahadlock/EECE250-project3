@@ -20,12 +20,13 @@ Grid::Grid() {
 //read the first number in the first line in order to get the size of the grid
 //    int sLine;
 
-//    n >> sLine;
     
-    column = 0;     //initialize column to 0 to start
-    row = 0;        //initialize row to 0 to start
+    int column = 0;     //initialize column to 0 to start
+    int row = 0;        //initialize row to 0 to start
   
     inFile >> column >> row;
+    
+    const int n = 15;
 
     grid[ n ][ n ] = {};        //create a matrix characters called grid of size n x n
 
