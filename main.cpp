@@ -21,16 +21,6 @@ int main() {
     		search(algo);
   	}
   	else { 
-    	c	out << "You have entered an invalid algorithm choice. Please try again." << endl;
+    		cout << "You have entered an invalid algorithm choice. Please try again." << endl;
   	}
-
-	int result = wordlist.lookup();
-	
-	if (result == -1){
-		cout << ("Element not present");
-	}
-	else {
-		cout << ("Element found at index ") << result;
-	}
-
 }
