@@ -113,9 +113,9 @@ int main() {
   
   int algo;
   cout << "Which algorithm would you like to use to search the worldlist? Please enter 1, 2, or 3 to choose:" << endl;  
-  cout << "#1 Insertion Sort << endl;
-  cout << "#2 Quick Sort << endl;
-  cout << "#3 Merge Sort << endl;
+  cout << "#1 Insertion Sort" << endl;
+  cout << "#2 Quick Sort" << endl;
+  cout << "#3 Merge Sort" << endl;
   cin >> algo
   
   if (algo = 1 || algo = 2 || algo = 3) {
