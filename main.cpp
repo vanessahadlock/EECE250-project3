@@ -9,9 +9,9 @@ using namespace std;
 
 int main() {
 	
-	Wordlist word; 
+	Wordlist wordlist; 
 
-	word.get_words();
+	wordlist.get_words();
 
 	int algo;
   	cout << "Which algorithm would you like to use to search the worldlist? Please enter 1, 2, or 3 to choose:" << endl;  
