@@ -55,9 +55,9 @@ void search(int algo) {
  
 
   //Wordlist object 
-  Wordlist wordlist; 
+   Wordlist wordlist; 
  
-	 wordlist.get_words();
+   wordlist.get_words();
   
   //if the user chose to use algorithm 1, then run the insertion_sort() function on the Wordlist 
   if (algo = 1) { 
@@ -65,7 +65,7 @@ void search(int algo) {
     //Recording the starting clock tick for the insertion sort algorithm
     sortStart = clock(); 
     
-    word.insertion_sort();
+    wordlist.insertion_sort();
     
     //Recording the end clock tick  
     sortEnd = clock(); 
@@ -76,7 +76,7 @@ void search(int algo) {
     //Recording the starting clock tick for the insertion sort algorithm
     sortStart = clock(); 
     
-    word.quick_sort(vector<string> vec, int low, int high);
+    wordlist.quick_sort(vector<string> vec, int low, int high);
     
     //Recording the end clock tick  
     sortEnd = clock(); 
@@ -87,7 +87,7 @@ void search(int algo) {
     //Recording the starting clock tick for the insertion sort algorithm
     sortStart = clock(); 
     
-    word.merge_sort(vector<string> vec, int low, int mid, int high);
+    wordlist.merge_sort(vector<string> vec, int low, int mid, int high);
   
     //Recording the end clock tick  
     sortEnd = clock(); 
