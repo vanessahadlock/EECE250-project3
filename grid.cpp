@@ -51,7 +51,7 @@ Grid::Grid(const char * fileName) {
     //checks to see if the file opens sucessfully 
     if (file_A.is_open() && file_A.good()) {
     
-        //while loop that reads the file in as a vector spring and separates it into elements
+        //while loop that reads the file in as a vector string and separates it into elements
         //using temporary arrays
         while (getline(file_A, line_A)) {
             
