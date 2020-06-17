@@ -57,6 +57,7 @@ void search(int algo) {
   //Wordlist object 
    Wordlist wordlist; 
  
+   //read through file and insert words into the wordlist vector
    wordlist.get_words();
   
   //if the user chose to use algorithm 1, then run the insertion_sort() function on the Wordlist 
