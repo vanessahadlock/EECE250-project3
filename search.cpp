@@ -96,15 +96,6 @@ void search(int algo) {
   
   //Recording the starting clock tick for the findMatches() algorithm to search for the matching words in the grid
   searchStart = clock(); 
-  
- 
-  int result = wordlist.lookup();
-	 if (result == -1){
-      cout << ("Element not present");
-	 }
-	 else {
-		    cout << ("Element found at index ") << result;
-	 }
  
   //prints out all words from the word list that can be found in the grid
   findMatches(wordlist, Grid X(fileName));
