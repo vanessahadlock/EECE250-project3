@@ -21,26 +21,41 @@ void search(int algo) {
   
   //Recording the starting tick of running the whole program
   start = clock(); 
-  
-  string textFile;
-  
+    
+    //declaring variables for number of rows, columns, default character g for the initialization of the matrix,
+    //and the file name pointer 
+    int numRow;
+    char * fileName;
+    int numCol;
+    char g;
+
+    cout << "What is the name of the file you would like to use? Please use the .txt extension" << endl;
+    cin >> fileName;
+    cout << "How many rows are in this grid?" << endl;
+    cin >> numRow;
+    cout << "How many columns are in this grid?" << endl;
+    cin >> numCol;
+    
+    //initialization of the Grid using the first constructor
+    Grid A(numRow, numCol, g);
+    int row = A.getRows();
+
+    //using the text file to fill in the Grid by calling the second constructor
+    Grid X(fileName);
+    
+    //prints out the grid matrix you just created
+    X.printGrid(numCol, numRow);
+ 
  /* clock_t clock(void) returns the number of clock ticks elapsed since the program was launched. To get the number  
     of seconds used by the CPU, you will need to divide by CLOCKS_PER_SEC, where CLOCKS_PER_SEC is 1000000 on typical 
     32 bit system.
   */
+ 
   clock_t sortStart, sortEnd, searchStart, searchEnd;
-  
-  //Reading in the name of the grid file from the user input 
-  cout << "What is the name of the grid file like to find words from? Please include the .txt extension: " << endl;
-  
-  //saving this as the name of the textfile
-  cin >> textFile; 
+ 
 
   //Wordlist object 
   Wordlist word;
-  
-  //Grid object
-  Grid grid;
   
   //if the user chose to use algorithm 1, then run the insertion_sort() function on the Wordlist 
   if (algo = 1) { 
@@ -59,7 +74,7 @@ void search(int algo) {
     //Recording the starting clock tick for the insertion sort algorithm
     sortStart = clock(); 
     
-    word.quick_sort(param);
+    word.quick_sort(vector<string> vec, int low, int high);
     
     //Recording the end clock tick  
     sortEnd = clock(); 
@@ -70,7 +85,7 @@ void search(int algo) {
     //Recording the starting clock tick for the insertion sort algorithm
     sortStart = clock(); 
     
-    word.merge_sort(param);
+    word.merge_sort(vector<string> vec, int low, int mid, int high);
   
     //Recording the end clock tick  
     sortEnd = clock(); 
@@ -80,7 +95,7 @@ void search(int algo) {
   searchStart = clock(); 
   
   //prints out all words from the word list that can be found in the grid
-  findMatches(word, grid);
+  findMatches(word, Grid X(fileName));
   
   //Recording the ending clock tick
   searchEnd = clock(); 
